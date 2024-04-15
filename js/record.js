@@ -266,7 +266,7 @@ function startRecording() {
           clearTimeout(stopRecordingTimeout);
 
           // time limit for recording is 2 minutes
-            setTimeout(() => {
+           stopRecordingTimeout = setTimeout(() => {
                 stopRecording();
             }, 120000);
 
@@ -282,10 +282,7 @@ function startRecording() {
 }
 
 // Function to stop recording
-function stopRecording() {
-  // Clear the timeout to prevent automatic stopping
-  clearTimeout(stopRecordingTimeout);
-    
+function stopRecording() {    
   mediaRecorder.stop();
   startRecordingButton.textContent = 'Start Recording';
   startRecordingButton.removeEventListener('click', stopRecording);
@@ -296,6 +293,9 @@ function stopRecording() {
 
   // state recording
   recording = false;
+
+  // Clear the timeout to prevent automatic stopping
+  clearTimeout(stopRecordingTimeout);
 
   console.log('Recording stopped');
 }
