@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="id">Registration ID (numerical):</label>
+            <input type="number" id="reg" name="reg" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone Number (10 digit):</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+            <div style="display: flex; align-items: center; justify-content: center">
+                <input type="checkbox" id="consentCheckbox">
+                <label for="consentCheckbox" id="consentLabel">I agree to the <span id="consentHighlight" style="cursor: pointer; color: blue;">consent form</span></label>
+            </div>
+
+            <button type="submit" id="login">Submit</button>
+        </form>
+    </div>
+    
+    <div id="consentPopup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border: 1px solid #ccc; background-color: #fff; z-index: 1000; max-width: 400px; max-height: 80vh; overflow-y: auto;">
+        <p>This is the consent text. Please read it carefully.
+            By clicking the "Submit" button, you are agreeing to the following: </p>
+
+        <p><strong>Title of Research Project:</strong> Advancing Personality Trait Identification: An Audio-Visual Multimodal Fusion Deep Learning Framework for Recommending Potential Employees Recruitment at Manipal Group of Institutions</p>
+
+        <p><strong>Research Institutions:</strong> Manipal Group of Institutions</p>
+
+        <p><strong>Introduction:</strong><br>
+        This consent form outlines the terms and conditions regarding the use of your videos in the research project mentioned above. Please read this form carefully. By proceeding forward, you are agreeing to the following conditions.</p>
+
+        <ol>
+            <li><strong>Purpose of the Research:</strong><br>
+            The purpose of this research project is to create a dataset for academic and research purposes. Your videos will be used to develop and train artificial intelligence (AI) models for projects such as, but not limited to, Personality Trait Identification, facial recognition, emotion detection, etc.</li>
+
+            <li><strong>Description of Participation:</strong><br>
+            You are being asked to provide your consent for the usage of videos containing your face and actions. These videos may be recorded during research sessions or provided by you voluntarily. Your participation is voluntary, and you have the right to not proceed forward if you disagree.</li>
+
+            <li><strong>Use of Videos:</strong><br>
+            Your videos will be used solely for academic and research purposes. They may be included in a dataset that will be made publicly available for research purposes, including but not limited to publication, presentations, and development of AI models.</li>
+
+            <li><strong>Risks and Benefits:</strong><br>
+            While every effort will be made to ensure the security and privacy of your data, there may be potential risks associated with the use of AI technology, such as misuse of the dataset. However, the potential benefits of this research include advancing scientific knowledge, contributing to the development of AI technology, and potential societal applications in areas such as healthcare, security, and education.</li>
+
+            <li><strong>Compensation:</strong><br>
+            You will not receive any financial compensation for participating in this research project. Your participation is voluntary and motivated by your interest in contributing to scientific advancement.</li>
+
+            <li><strong>Contact Information:</strong><br>
+            If you have any questions or concerns about this research project or your participation, please contact the Principal Investigator at the following address:</li>
+
+            <li><strong>Subject to changes:</strong><br>
+            The terms and conditions outlined in this consent form are subject to change. You will be notified of any changes, and your consent will be sought again if necessary.</li>
+        </ol>
+
+        <p>Dr. Amit Kumar Gupta<br>
+        +91-7014402055</p>
+
+        <p><strong>Consent:</strong><br>
+        I have read and understood the information provided in this consent form. I voluntarily consent to the usage of my videos for the purposes described above.</p>
+
+        </p>
+        <button id="closeConsent" style="margin: 10px auto; display: block;">I agree</button>
+    </div>
+
+    
+    <div class="copyright-container">
+        <p>&copy; 2024 MRB Research Project. All rights reserved.</p>
+        <p>By using the platform, you are voluntarily agreeing to the usage of your interview videos for research work.</p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record</title>
+    <link rel="stylesheet" href="css/record.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text-container">
+            <h4>Question</h4>
+            <div id="question"></div>
+        </div>
+        <div class="camera-container">
+            <button id="startRecording">Start Recording</button>
+            <div id="timer" class="timer">00:00</div>
+            <video id="liveFeed" autoplay></video>
+        </div>
+    </div>
+    <div class="preview-container">
+        <h2>Recorded Video Preview</h2>
+        <video id="preview" controls></video>
+        <button id="submit">Submit</button>
+    </div>
+    <script src="js/record.js"></script>
+    <script src="js/fix-webm-duration.js"></script>
+</body>
+</html>

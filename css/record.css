@@ -1,0 +1,78 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #000428, #004e92);
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+}
+
+.text-container,
+.camera-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-container {
+    text-align: center;
+    /* set font size */
+    font-size: 2.0em;
+    background-color: #fff;
+}
+
+.camera-container {
+    font-size: x-large;
+    background-color: #f9f9f9;
+}
+
+.preview-container {
+    margin: 0 auto; /* Center the container horizontally */
+    width: 1024px; /* Set your desired width */
+    height: 576px; /* Set your desired height */
+    text-align: center;
+    background-color: linear-gradient(to right, #000428, #004e92); /* Optional background for the container */
+    border-radius: 5px; /* Optional rounded corners */
+    font-size: x-large;
+}
+
+/*p with id message*/
+#mess {
+    color: #ffffff;
+    font-size: 1em;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* set size of button */
+    font-size: 1.0em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+video {
+    width: 100%; /* Fills the available space within the container */
+    max-width: 100%; /* Ensures video doesn't overflow */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
