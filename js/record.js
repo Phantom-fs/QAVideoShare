@@ -184,6 +184,8 @@ console.log(questions[set_number][counter]);
 let timerInterval;
 let secondsElapsed = 0;
 
+let stopRecordingTimeout; // variable to hold the timeout
+
 var StartTime;
 
 // Function to start capturing video and audio
@@ -260,6 +262,9 @@ function startRecording() {
           startRecordingButton.textContent = 'Stop Recording';
           startRecordingButton.removeEventListener('click', startRecording);
 
+          // Clear any existing timeout
+          clearTimeout(stopRecordingTimeout);
+
           // time limit for recording is 2 minutes
             setTimeout(() => {
                 stopRecording();
@@ -278,6 +283,9 @@ function startRecording() {
 
 // Function to stop recording
 function stopRecording() {
+  // Clear the timeout to prevent automatic stopping
+  clearTimeout(stopRecordingTimeout);
+    
   mediaRecorder.stop();
   startRecordingButton.textContent = 'Start Recording';
   startRecordingButton.removeEventListener('click', stopRecording);
