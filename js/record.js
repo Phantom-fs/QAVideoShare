@@ -3,7 +3,7 @@ let recordedChunks = [];
 let recording = false; // boolean state recording or not
 
 // random number
-let randomNumber = Math.floor(Math.random() * 1000);
+let randomNumber = Math.floor(Math.random() * 100);
 
 // counter, local storage
 let counter = localStorage.getItem('counter');
@@ -355,7 +355,10 @@ function submitRecording() {
   // Create a FormData object to send the video blob
   const formData = new FormData();
 
-  file_name = set_number + "_" + counter + "_" + randomNumber + ".webm";
+  // random number new
+  let rand = Math.floor(Math.random() * 100);
+
+  file_name = set_number + "_" + counter + "_" + rand + randomNumber + ".webm";
 
   console.log(file_name);
 
