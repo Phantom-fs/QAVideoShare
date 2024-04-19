@@ -384,7 +384,8 @@ function submitRecording() {
       body: formData,
       headers: {
         'Content-Type': 'multipart/form-data'
-      }
+      },
+      mode: 'cors'
   })
   .then(response => response.json())
   .then(data => {
