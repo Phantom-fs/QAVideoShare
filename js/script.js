@@ -1,7 +1,7 @@
 document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
 
-    var name = document.getElementById("name").value;
+    var name = document.getElementById("name").value.trim();
     var reg = document.getElementById("reg").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
