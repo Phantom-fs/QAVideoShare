@@ -268,7 +268,7 @@ function startRecording() {
           // time limit for recording is 2 minutes
            stopRecordingTimeout = setTimeout(() => {
                 stopRecording();
-            }, 120000);
+            }, 60500);
 
           startRecordingButton.addEventListener('click', stopRecording);
         })
