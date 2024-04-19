@@ -381,8 +381,7 @@ function submitRecording() {
   // Send the video blob to the server
   fetch(url, {
       method: 'POST',
-      body: formData,
-      mode: 'cors'
+      body: formData
   })
   .then(response => response.json())
   .then(data => {
